@@ -1,9 +1,12 @@
 .container img{
     width: 300px;
 }
-
+.PImage {
+    height: 200px;
+}
 .container{
     margin: 10px;
+    width: 300px;
     background-color: #ececec;
     border-radius: 10px;
     overflow: hidden;
@@ -42,6 +45,7 @@
     padding: 5px 10px;
     color: white;
     font-weight: bold;
+    
 }
 
 

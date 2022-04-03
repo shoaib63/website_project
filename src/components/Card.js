@@ -34,12 +34,12 @@ class Card extends Component {
         const { counter } = this.state;
         return (
             <div className={styles.container}>
-                <img src={image} />
+                <img className={styles.PImage} src={image} />
                 <h3>{name}</h3>
                 <p>{cost} {counter ? `* ${counter} = ${counter * cost.split(" ")[0]} $` : "" }</p>
 
                 <div className={styles.counter}>
-                    <img className={!this.state.counter && styles.deactive } onClick={this.downHandler} src={down} />
+                    <img className={!this.state.counter ? styles.deactive : ""} onClick={this.downHandler} src={down} />
                     <span>{counter}</span>
                     <img onClick={this.upHandler} src={up} />
                 </div>
