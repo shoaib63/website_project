@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Cards from "./components/Cards";
-import Search from './components/Search';
-import Logos from './components/Logos';
+
+import { Route, Routes } from "react-router-dom"
 
 
-import twitter from './images/twitter-logo.png'; 
-import facebook from "./images/facebook-logo.png";
-import telegram from "./images/telegram-logo.png";
 import Footer from './components/Footer';
-
+import Landing from './components/Landing';
+import Products from "./components/Products"
+ 
 class App extends Component {
     render() {
-        const images = [twitter, facebook, telegram];
         return (
             <div>
                 <Navbar />
-                <Banner />
-                <Cards />
-                <Search />
-                <Logos image={images} />
+                <Routes>
+                    <Route path='/products' component={Products} />
+                    <Route path='/' component={Landing} />
+                </Routes>
+                
                 <Footer />
             </div>
         );
@@ -28,3 +25,4 @@ class App extends Component {
 }
 
 export default App;
+

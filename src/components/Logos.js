@@ -3,7 +3,12 @@ import React from 'react';
 import styles from "./Logos.module.css";
 
 
-const Logos = (props) => {    
+
+import twitter from '../images/twitter-logo.png'; 
+import facebook from "../images/facebook-logo.png";
+import telegram from "../images/telegram-logo.png";
+
+const Logos = () => {    
     return (
         <div>
             <>
@@ -11,9 +16,9 @@ const Logos = (props) => {
                     <p>Who supports us?</p>
                 </div>
                 <div className={styles.images}>
-                    <img src={props.image[0]}/>
-                    <img src={props.image[1]}/>
-                    <img src={props.image[2]}/>
+                    <img src={twitter}/>
+                    <img src={facebook}/>
+                    <img src={telegram}/>
                 </div>
             </>
         </div>
