@@ -24,11 +24,11 @@ class Products extends Component {
 
     render() {
         const { products } = this.state;
-
+        console.log(products);
         return (
             <div className={styles.container}>
                 {
-                    products.length ? this.state.products.map(product => <Card key={v4()} image={product.image} name={product.title} cost={`${product.price} $`} />) :
+                    products.length ? this.state.products.map(product => <Card key={v4()} image={product.image} name={product.title} cost={`${product.price} $`} id={product.id} />) :
                     <h1>Loading...</h1>
                 }
             </div>
